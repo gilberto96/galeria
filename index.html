@@ -1,0 +1,143 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Galería Mobile</title> 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="lib/jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.css" />
+	<link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+	<style type="text/css">
+		div.gallery-row:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
+		div.gallery-item { float: left; width: 44.444444%; }
+		div.gallery-item a { display: block; margin: 5px; border: 1px solid #3c3c3c; }
+		div.gallery-item img { display: block; width: 100%; height: auto; }
+		#Gallery1 .ui-content{ overflow: hidden; }
+	</style>
+	
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<script type="text/javascript" src="lib/simple-inheritance.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.animate-enhanced.min.js"></script>
+	<script type="text/javascript" src="lib/code-photoswipe-jQuery-1.0.11.min.js"></script>
+	
+	<script type="text/javascript">
+		
+		/*
+			Este ejemplo muestra cómo configurar PhotoSwipe usando jQuery Mobile.
+		*/
+		
+		$(document).ready(function(){
+			
+			$('div.gallery-page').live('pageshow', function(e){
+					
+				// Re-inicializar con las fotos de la página actual
+				$("div.gallery a", e.target).photoSwipe();
+				return true;
+				
+			})
+				
+		});
+	
+	</script>
+</head> 
+<body> 
+
+<div data-role="page" id="Home">
+
+	<div data-role="header">
+		<h1>Galería Mobile</h1>
+	</div>
+	
+	<div data-role="content" >	
+		<p style="text-align:justify; font-size:80%;font-family:"> 
+Más Valores, Menos VIH<br><br>
+
+StopVIH, dedicada a prevenir la epidemia del virus de inmunodeficiencia humana (VIH) y del síndrome de inmunodeficiencia adquirida (SIDA), este año contó con el apoyo de más de 40 artistas en su nueva campaña, que desde ya circula a través de las redes sociales y otros medios de comunicación con el fin de promover valores sociales y la prevención del VIH.<br><br>
+
+La iniciativa cuenta con el respaldo del Fondo de Población de las Naciones Unidas (UNFPA), el Programa Conjunto de las Naciones Unidas para el Sida (ONUSIDA), la Fundación Mercantil, MAC Cosmetics y Cinesa Venezuela.<br><br>
+
+En la campaña participan Adolfo Cubas, Adrianni Caraballo, Alexander Leterni, Anthony Texeira, Aristides Barbella, Arlette Torres, Beatriz Adrián, Carlos Cruz, Damián Genovese, Daniel Huen, Diego Kapeky, Dougle “Cheo” Díaz, Eben Renan, Enghel, Erica Santiado, Esteban Velásquez, Eterio (Emmanuel Da Silva, Jaime Salcedo y Julio Erviti), Francisco León, Gabriel Parisi, Guillermo Carrasco, Huascar Barradas, Indra Santamaría, Jennifer Moya, Jessica Grau, José Manuel Ascensao, Karina Salaya, Lago Baroni, Layla Succar, Leonardo Aldana, Luis Capecchi, María De Luz Da Silva, Mercedes Brito, Nikky Sánchez, Osman Aray, Raúl Olivo, Ricardo Salmerón, Romina Daddio, William Guzmán.<br><br>
+</p>				
+		<ul data-role="listview" data-inset="true">
+			<li><a href="#Gallery1">Galería de Imágenes</a></li> 
+		</ul> 		
+		<p>PhotoSwipe también ha sido diseñado para funcionar independiente y se puede integrar fácilmente en sus sitios web para móviles.</p>		
+		<ul data-role="listview" data-inset="true">
+			<li><a href="#Gallery2">Galería de Fotografía</a></li> 
+		</ul> 		
+	</div>
+
+	<div data-role="footer">
+		<h4>&copy; 2014 Pep Farin Blog</h4>
+	</div>
+
+</div><!-- FIN #HOME -->
+
+
+<div data-role="page" id="Gallery1" class="gallery-page">
+
+	<div data-role="header">
+		<h1>Galería de Imágenes</h1>
+	</div>
+
+	<div data-role="content">
+    			
+		<div class="gallery">        				
+            	<div class="gallery-item"><a href="http://www.stopvih.org/wp-content/uploads/2013/09/Carlos-Cruz.jpg" rel="external"><img src="http://www.stopvih.org/wp-content/uploads/2013/09/Carlos-Cruz.jpg" alt="Image 002" /></a></div>				
+			  	<div class="gallery-item"><a href="http://www.stopvih.org/wp-content/uploads/2013/09/Carlos-Cruz.jpg" rel="external"><img src="http://www.stopvih.org/wp-content/uploads/2013/09/Carlos-Cruz.jpg" alt="Image 002" /></a></div>				
+				<div class="gallery-item"><a href="http://www.stopvih.org/wp-content/uploads/2013/09/Raul-Olivo.jpg" rel="external"><img src="http://www.stopvih.org/wp-content/uploads/2013/09/Raul-Olivo.jpg" alt="Image 003" /></a></div>				
+		  </div>		
+			<div class="gallery-row">		
+				<div class="gallery-item"><a href="http://www.stopvih.org/wp-content/uploads/2013/09/Ricardo-Salmeron.jpg" rel="external"><img src="http://www.stopvih.org/wp-content/uploads/2013/09/Raul-Olivo.jpg" alt="Image 004" /></a></div>				
+				<div class="gallery-item"><a href="http://www.stopvih.org/wp-content/uploads/2013/09/Ricardo-Salmeron.jpg" rel="external"><img src="http://www.stopvih.org/wp-content/uploads/2013/09/Ricardo-Salmeron.jpg" alt="Image 005" /></a></div>				
+				<div class="gallery-item"><a href="images/full/006.jpg" rel="external"><img src="images/thumb/006.jpg" alt="Image 006" /></a></div>	
+			</div>	
+			<div class="gallery-row">		
+				<div class="gallery-item"><a href="images/full/007.jpg" rel="external"><img src="images/thumb/007.jpg" alt="Image 007" /></a></div>				
+				<div class="gallery-item"><a href="images/full/008.jpg" rel="external"><img src="images/thumb/008.jpg" alt="Image 008" /></a></div>				
+				<div class="gallery-item"><a href="images/full/009.jpg" rel="external"><img src="images/thumb/009.jpg" alt="Image 009" /></a></div>	
+			</div>	
+		</div>		
+	</div>
+	
+	<div data-role="footer">
+		<h4>&copy; 2014 Pep Farin Blog</h4>
+	</div>
+	
+</div><!-- FIN #GALLERY1 -->
+
+<div data-role="page" id="Gallery2" class="gallery-page">
+
+	<div data-role="header">
+		<h1>Galería de Fotografía</h1>
+	</div>
+
+	<div data-role="content">			
+		<div class="gallery">	
+			<div class="gallery-row">		
+				<div class="gallery-item"><a href="images/full/010.jpg" rel="external"><img src="images/thumb/010.jpg" alt="Image 010" /></a></div>				
+				<div class="gallery-item"><a href="images/full/011.jpg" rel="external"><img src="images/thumb/011.jpg" alt="Image 011" /></a></div>				
+				<div class="gallery-item"><a href="images/full/012.jpg" rel="external"><img src="images/thumb/012.jpg" alt="Image 012" /></a></div>				
+			</div>		
+			<div class="gallery-row">		
+				<div class="gallery-item"><a href="images/full/013.jpg" rel="external"><img src="images/thumb/013.jpg" alt="Image 013" /></a></div>				
+				<div class="gallery-item"><a href="images/full/014.jpg" rel="external"><img src="images/thumb/014.jpg" alt="Image 014" /></a></div>				
+				<div class="gallery-item"><a href="images/full/015.jpg" rel="external"><img src="images/thumb/015.jpg" alt="Image 015" /></a></div>	
+			</div>
+			<div class="gallery-row">		
+				<div class="gallery-item"><a href="images/full/016.jpg" rel="external"><img src="images/thumb/016.jpg" alt="Image 016" /></a></div>				
+				<div class="gallery-item"><a href="images/full/017.jpg" rel="external"><img src="images/thumb/017.jpg" alt="Image 017" /></a></div>				
+				<div class="gallery-item"><a href="images/full/018.jpg" rel="external"><img src="images/thumb/018.jpg" alt="Image 018" /></a></div>	
+			</div>	
+		</div>		
+	</div>
+	
+	<div data-role="footer">
+		<h4>&copy; 2014 Pep Farin Blog</h4>
+	</div>
+	
+</div><!-- FIN #GALLERY2-->
+
+</body>
+</html>
